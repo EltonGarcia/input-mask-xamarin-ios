@@ -49,7 +49,6 @@
     <Folder Include="Classes\Model\States\" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="MyClass.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Classes\Helper\CaretStringIterator.cs" />
     <Compile Include="Classes\Model\CaretString.cs" />

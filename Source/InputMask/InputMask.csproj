@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{19BE37DD-82BA-4802-90AD-E32AFA1F6D56}</ProjectGuid>
+    <ProjectTypeGuids>{FEACFBD2-3405-455C-9665-78FE426C6842};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <RootNamespace>InputMask</RootNamespace>
+    <AssemblyName>InputMask</AssemblyName>
+    <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <MtouchDebug>true</MtouchDebug>
+    <MtouchNoSymbolStrip>true</MtouchNoSymbolStrip>
+    <MtouchFastDev>true</MtouchFastDev>
+    <IOSDebuggerPort>48967</IOSDebuggerPort>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <MtouchNoSymbolStrip>true</MtouchNoSymbolStrip>
+    <MtouchLink>SdkOnly</MtouchLink>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="Xamarin.iOS" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\" />
+    <Folder Include="Classes\" />
+    <Folder Include="Classes\Helper\" />
+    <Folder Include="Classes\Model\" />
+    <Folder Include="Classes\View\" />
+    <Folder Include="Classes\Model\States\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="MyClass.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Classes\Helper\CaretStringIterator.cs" />
+    <Compile Include="Classes\Model\CaretString.cs" />
+    <Compile Include="Classes\Model\State.cs" />
+    <Compile Include="Classes\Model\Next.cs" />
+    <Compile Include="Classes\Model\States\EOLState.cs" />
+    <Compile Include="Classes\Model\States\FixedState.cs" />
+    <Compile Include="Classes\Model\States\FreeState.cs" />
+    <Compile Include="Classes\Model\States\OptionalValueState.cs" />
+    <Compile Include="Classes\Helper\CharacterSet.cs" />
+    <Compile Include="Classes\Model\States\ValueState.cs" />
+    <Compile Include="Classes\View\MaskedTextFieldDelegate.cs" />
+    <Compile Include="Classes\Mask.cs" />
+    <Compile Include="Classes\View\IMaskedTextFieldDelegateListener.cs" />
+    <Compile Include="Classes\Helper\Compiler.cs" />
+    <Compile Include="Classes\Helper\FormatSanitizer.cs" />
+    <Compile Include="Classes\Model\WrongFormatException.cs" />
+    <Compile Include="Classes\Model\CompilationException.cs" />
+    <Compile Include="Classes\Helper\StringExtensions.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
+</Project>

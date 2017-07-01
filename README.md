@@ -48,3 +48,7 @@ Mask format examples:
 8. 8([000])[000]-[00]-[00]
 9. [0000]{-}[00]
 10. +1 ([000]) [000] [00] [00]
+
+# License
+
+The library is distributed under the MIT [LICENSE](https://opensource.org/licenses/MIT).

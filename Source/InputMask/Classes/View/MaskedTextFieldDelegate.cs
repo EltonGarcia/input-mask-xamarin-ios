@@ -217,8 +217,7 @@ namespace InputMask.Classes.View
 
                 if (range.Length > 0)
                 {
-                    result.Replace(range, newContent);
-                    return text.Replace(text, newText);
+                    return result.Replace(range, newContent).ToString();
                 }
                 else
                 {
